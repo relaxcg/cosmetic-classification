@@ -10,7 +10,7 @@ public interface IBaseService<T, R, U, V> extends IService<T> {
 
     Integer create(R req);
 
-    Integer update(U u);
+    Integer update(U updateReq);
 
     V get(Integer id);
 

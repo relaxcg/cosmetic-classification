@@ -18,10 +18,12 @@ public abstract class BaseServiceImpl<M extends BaseMapper<T>, T, R, U, V> exten
         System.out.println("vClass:" + vClass.getName());
     }
 
+
     @Override
     @Nullable
     public V get(Integer id) {
         T t = getById(id);
         return BeanUtils.copy(t, vClass);
     }
+
 }

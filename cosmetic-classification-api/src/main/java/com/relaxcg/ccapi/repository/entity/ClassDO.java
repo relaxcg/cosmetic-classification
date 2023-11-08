@@ -3,8 +3,7 @@ package com.relaxcg.ccapi.repository.entity;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-
-import java.time.LocalDateTime;
+import lombok.NoArgsConstructor;
 
 /**
  * @author relaxcg
@@ -13,13 +12,11 @@ import java.time.LocalDateTime;
 @EqualsAndHashCode(callSuper = true)
 @Data
 @TableName("cc_class")
+@NoArgsConstructor
 public class ClassDO extends BaseDO {
     private String name;
-    private LocalDateTime createTime;
 
-    public ClassDO(Integer id, String name, LocalDateTime createTime) {
-        super(id);
+    public ClassDO(String name) {
         this.name = name;
-        this.createTime = createTime;
     }
 }
