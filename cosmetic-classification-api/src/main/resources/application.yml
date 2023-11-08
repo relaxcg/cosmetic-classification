@@ -1,0 +1,10 @@
+server:
+  servlet:
+    context-path: /ccapi
+
+spring:
+  datasource:
+    username: mx
+    password: mx
+    url: jdbc:sqlite:D:/ideaProjects/db
+    driver-class-name: org.sqlite.JDBC
