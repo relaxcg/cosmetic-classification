@@ -1,17 +1,24 @@
 server:
   servlet:
     context-path: /ccapi
-  port: 8081
+  port: 8080
 
 spring:
   datasource:
     username: mx
     password: mx
-    url: jdbc:sqlite::resource:db/db.sqlite
-    driver-class-name: org.sqlite.JDBC
+    url: jdbc:h2:file:./data/db
+    driver-class-name: org.h2.Driver
   sql:
     init:
+      mode: always
       schema-locations: classpath:db/schema.sql
+  h2:
+    console:
+      path: /h2-console
+      enabled: true
+  cache:
+    cache-names:
 
 mybatis-plus:
   configuration:

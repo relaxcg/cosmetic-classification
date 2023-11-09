@@ -50,4 +50,5 @@ public class ClassController implements BaseController<ClassReq, ClassUpdateReq,
     public Result<List<ClassVO>> getAll() {
         return Result.success(classService.list()).map2VO(ClassVO.class);
     }
+
 }

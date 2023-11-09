@@ -1,6 +1,7 @@
 package com.relaxcg.ccapi.repository.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.relaxcg.ccapi.repository.entity.base.BaseDO;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;

@@ -1,4 +1,4 @@
-package com.relaxcg.ccapi.repository.entity;
+package com.relaxcg.ccapi.repository.entity.base;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.IdType;
@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.Date;
 
 /**
  * @author relaxcg
@@ -26,9 +27,9 @@ public abstract class BaseDO {
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss.SSS")
     private LocalDateTime createTime;
 
-    @TableField(fill = FieldFill.UPDATE)
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss.SSS")
-    private LocalDateTime modifyTime;
+    // @TableField(fill = FieldFill.INSERT_UPDATE)
+    // @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss.SSS")
+    // private LocalDateTime modifyTime;
 
     @TableField(fill = FieldFill.INSERT)
     private Boolean deleted;
